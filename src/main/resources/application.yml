@@ -2,12 +2,3 @@
 server:
   port: ${NOMAD_HOST_PORT_http:8080}
   shutdown: graceful
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info, prometheus
-  metrics:
-    tags:
-      application: ${spring.application.name}    # 서비스 단위의 식별자. Prometheus label 에 추가됨.

@@ -18,4 +18,9 @@ public class TestPublicApplication {
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return String.format("안녕 %s!", name);
 	}
+
+	@GetMapping("/health")
+	public String health() {
+		return "{ \"status\":\"UP\" }";
+	}
 }
