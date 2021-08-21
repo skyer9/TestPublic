@@ -8,3 +8,6 @@ management:
     web:
       exposure:
         include: health, info, prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}    # 서비스 단위의 식별자. Prometheus label 에 추가됨.
